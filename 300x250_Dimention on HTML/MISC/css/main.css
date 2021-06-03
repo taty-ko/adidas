@@ -1,0 +1,353 @@
+html {
+	font-family: sans-serif; /* 1 */
+	-ms-text-size-adjust: 100%; /* 2 */
+	-webkit-text-size-adjust: 100%; /* 2 */
+}
+
+body {
+	margin: 0;
+}
+
+a {
+	background-color: transparent;
+}
+
+a:active,
+a:hover {
+	outline: 0;
+	text-decoration: none;
+}
+
+b,
+strong {
+	font-weight: bold;
+}
+
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sup {
+	top: -.5em;
+}
+
+sub {
+	bottom: -.25em;
+}
+
+/* .ellipsis {
+	white-space: nowrap; 
+	text-overflow: ellipsis; 
+	overflow: hidden;
+} 
+*/
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+* {
+	max-height: 1000000px;
+}
+
+body {
+	color: #333;
+	background: #fff;
+	font: 16px/1.2 "Arial", "Helvetica Neue", "Helvetica", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+	vertical-align: top;
+	display: inline-block;
+}
+
+p {
+	margin: 0 0 1em;
+}
+
+a {
+	text-decoration: none;
+	color: #333;
+	cursor: pointer;
+}
+
+#main {
+	width: 300px;
+	height: 250px;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+	vertical-align: top;
+	display: inline-block;
+	border: 1px solid #000000;
+	background-image: url(../images/bg-1.png);
+	animation: bgrnd 4s ease-in-out forwards;
+    -webkit-animation: bgrnd 4s ease-in-out forwards;
+	backface-visibility: hidden;
+}
+
+
+@keyframes bgrnd {
+	0%, 50%{
+		transform: scale(1);
+		-webkit-transform: scale(1);
+	}
+	75% {
+		transform: scale(1.02);
+		-webkit-transform: scale(1.02);
+	}
+	100% {
+		transform: scale(1);
+		-webkit-transform: scale(1);
+	}
+}
+
+@-webkit-keyframes bgrnd {
+	0%, 50%{
+		transform: scale(1);
+		-webkit-transform: scale(1);
+	}
+	75% {
+		transform: scale(1.02);
+		-webkit-transform: scale(1.02);
+	}
+	100% {
+		transform: scale(1);
+		-webkit-transform: scale(1);
+	}
+}
+
+
+.frame-anim {
+	max-width: 228px;
+	height: 173px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	-webkit-animation: animImg 3s ease-out forwards;
+	animation: animImg 3s ease-out forwards;
+	backface-visibility: hidden;
+}
+
+
+@keyframes animImg {
+	0%  {
+		width: 0;
+	}
+	40%, 100% {
+		width: 228px;
+	}
+}
+
+@-webkit-keyframes animImg {
+	0%  {
+		width: 0;
+	}
+	40%, 100% {
+		width: 228px;
+	}
+}
+
+.text {
+	position: relative;
+	max-width: 144px;
+	max-height: 34px;
+	top: 189px;
+	left: 11px;
+	animation: animText;
+}
+
+
+.btn {
+	background: #fff;
+	max-width: 114px;
+	min-width: 114px;
+	max-height: 34px;
+	min-height: 34px;
+	display: inline-block;
+	border: 1px solid #fff;
+	position: absolute;
+	top: 0;
+	left: 168px;
+}
+.btn:hover{
+	transform: translate(5px, 10px);
+	transition: 0.7s;
+}
+
+.shop-now {
+	width: 58px;
+    height: 8px;
+    position: absolute;
+	bottom: 12px;
+    left: 15px;
+}
+
+.arrow {
+	width: 17px;
+    height: 8px;
+    position: absolute;
+    bottom: 12px;
+    left: 80px;
+}
+
+.logo {
+	width: 41px;
+    height: 28px;
+    position: absolute;
+    left: 234px;
+    top: 113px;
+}
+
+
+.frame-1 .img-2 {
+    position: absolute;
+	top: 0px;
+	left: 0px;
+	min-width: 228px;
+	max-width: 228px;
+	-webkit-animation: scaleImg 5s ease forwards 3;
+	animation: scaleImg 5s ease forwards 3;
+	backface-visibility: hidden;
+}
+
+.frame-1 .logo {
+    position: absolute;
+    top: 111px;
+    left: 236px;
+    min-width: 41px;
+    max-width: 41px;
+}
+
+.frame-1 .text-1 {
+	position: absolute;
+	top: 189px;
+    left: 9px;
+    width: 144px;
+}
+
+.frame-1 .text-2 {
+	position: absolute;
+    top: 214px;
+    left: 9px;
+    width: 144px;
+}
+
+.frame-1 .wrap .btn {
+	position: absolute;
+    top: 188px;
+    left: 168px;
+    height: 34px;
+    width: 114px;
+	background: #ffffff;
+	transition: .5s ease;
+	-webkit-animation: cta 5s ease-out forwards 3;
+	animation: cta 5s ease-in-out forwards 3;
+}
+
+.frame-1 .wrap:hover .btn {
+	will-change: transform;
+	will-change: opacity;
+	will-change: top, left, bottom, right;
+    top: 190px;
+    left: 170px;
+}
+
+.frame-1 .wrap .btn .text-btn {
+	position: absolute;
+    top: 12px;
+    left: 15px;
+	height: 10px;
+    min-width: 56px;
+    max-width: 56px;
+}
+
+.frame-1 .wrap .btn .arrow {
+    position: absolute;
+	top: 12px;
+    left: 83px;
+    width: 17px;
+	transition: .5s ease;
+}
+
+.frame-1 .wrap:hover .btn .arrow {
+	left: 85px;
+
+}
+
+.frame-1 .wrap .box {
+	position: absolute;
+    top: 190px;
+    left: 170px;
+    height: 34px;
+    width: 114px;
+    border: 1px solid #ffffff;
+}
+
+.frame-1 .wrap .box-overflow-2 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 228px;
+	height: 172px;
+	overflow: hidden;
+	will-change: width;
+	-webkit-animation: moveRight 5s ease-out forwards 3;
+	animation: moveRight 5s ease forwards 3;
+}
+
+
+@keyframes moveRight {
+	0%  {
+		width: 0;
+	}
+	40%, 100% {
+		width: 228px;
+	}
+}
+
+@-webkit-keyframes moveRight {
+	0%  {
+		width: 0;
+	}
+	40%, 100% {
+		width: 228px;
+	}
+}
+
+@keyframes scaleImg {
+	0% {
+		transform: scale(1.1);
+		-webkit-transform: scale(1.1);
+	}
+	40%, 100%{
+		transform: scale(1);
+		-webkit-transform: scale(1);
+	}
+}
+
+@-webkit-keyframes scaleImg {
+	0% {
+		transform: scale(1.1);
+		-webkit-transform: scale(1.1);
+	}
+	40%, 100% {
+		transform: scale(1);
+		-webkit-transform: scale(1);
+	}
+}

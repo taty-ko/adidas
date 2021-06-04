@@ -95,39 +95,24 @@ a {
 	display: inline-block;
 	border: 1px solid #000000;
 	background-image: url(../images/bg-1.png);
-	animation: bgrnd 4s ease-in-out forwards;
-    -webkit-animation: bgrnd 4s ease-in-out forwards;
+	animation:bgrnd 4s infinite alternate;
+    -webkit-animation: bgrnd 4s infinite alternate;
+	animation-iteration-count: 2;
 	backface-visibility: hidden;
 }
 
 
 @keyframes bgrnd {
-	0%, 50%{
-		transform: scale(1);
-		-webkit-transform: scale(1);
-	}
-	75% {
-		transform: scale(1.02);
-		-webkit-transform: scale(1.02);
-	}
-	100% {
-		transform: scale(1);
-		-webkit-transform: scale(1);
+	0%, 20%{
+		transform:linear-gradient;
+    	background-position: 20px 0;
 	}
 }
 
 @-webkit-keyframes bgrnd {
-	0%, 50%{
-		transform: scale(1);
-		-webkit-transform: scale(1);
-	}
-	75% {
-		transform: scale(1.02);
-		-webkit-transform: scale(1.02);
-	}
-	100% {
-		transform: scale(1);
-		-webkit-transform: scale(1);
+	0%, 20%{
+		transform:linear-gradient;
+    	background-position: 20px 0;
 	}
 }
 
@@ -172,15 +157,13 @@ a {
 	animation: animText;
 }
 
-
 .btn {
 	background: #fff;
 	max-width: 114px;
 	min-width: 114px;
 	max-height: 34px;
 	min-height: 34px;
-	display: inline-block;
-	border: 1px solid #fff;
+	display: block;
 	position: absolute;
 	top: 0;
 	left: 168px;
@@ -189,7 +172,15 @@ a {
 	transform: translate(5px, 10px);
 	transition: 0.7s;
 }
-
+.btn:hover::after {
+    content: '';
+    display: block;
+    background-color: pink;
+    position: absolute;
+    z-index:-1;
+    width: 100%;
+    height: 100%;
+}
 .shop-now {
 	width: 58px;
     height: 8px;
@@ -213,8 +204,7 @@ a {
     left: 234px;
     top: 113px;
 }
-
-
+/* 
 .frame-1 .img-2 {
     position: absolute;
 	top: 0px;
@@ -287,7 +277,6 @@ a {
 
 .frame-1 .wrap:hover .btn .arrow {
 	left: 85px;
-
 }
 
 .frame-1 .wrap .box {
@@ -310,7 +299,6 @@ a {
 	-webkit-animation: moveRight 5s ease-out forwards 3;
 	animation: moveRight 5s ease forwards 3;
 }
-
 
 @keyframes moveRight {
 	0%  {
@@ -350,4 +338,4 @@ a {
 		transform: scale(1);
 		-webkit-transform: scale(1);
 	}
-}
+} */

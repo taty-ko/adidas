@@ -6,10 +6,17 @@ html {
 
 body {
 	margin: 0;
+	color: #333;
+	background: #fff;
+	font: 16px/1.2 "Arial", "Helvetica Neue", "Helvetica", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 a {
 	background-color: transparent;
+	text-decoration: none;
+	cursor: pointer;
 }
 
 a:active,
@@ -39,13 +46,6 @@ sub {
 	bottom: -.25em;
 }
 
-/* .ellipsis {
-	white-space: nowrap; 
-	text-overflow: ellipsis; 
-	overflow: hidden;
-} 
-*/
-
 html {
 	box-sizing: border-box;
 }
@@ -60,14 +60,6 @@ html {
 	max-height: 1000000px;
 }
 
-body {
-	color: #333;
-	background: #fff;
-	font: 16px/1.2 "Arial", "Helvetica Neue", "Helvetica", sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
 img {
 	height: auto;
 	max-width: 100%;
@@ -79,43 +71,55 @@ p {
 	margin: 0 0 1em;
 }
 
-a {
-	text-decoration: none;
-	color: #333;
-	cursor: pointer;
-}
-
-#main {
+.wrapper {
 	width: 300px;
 	height: 250px;
-	margin: 0 auto;
+	margin: 0;
 	overflow: hidden;
 	position: relative;
-	vertical-align: top;
-	display: inline-block;
-	border: 1px solid #000000;
+	vertical-align: top; 
+	border: 1px solid #000;
+}
+
+.ad {
+	width: 300px;
+	height: 250px;
+	position: absolute;
+	top:0;
+	left: 0;
 	background-image: url(../images/bg-1.png);
-	animation:bgrnd 4s infinite alternate;
-    -webkit-animation: bgrnd 4s infinite alternate;
-	animation-iteration-count: 2;
-	backface-visibility: hidden;
+	animation-name: background;
+	animation-duration: 4s;
+	animation-iteration-count: 1;
+	animation-delay: 1s;
+	-webkit-animation-name: background;
+	-webkit-animation-duration: 4s;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-delay: 2s;
 }
-
-
-@keyframes bgrnd {
-	0%, 20%{
-		transform:linear-gradient;
-    	background-position: 20px 0;
-	}
+  
+  @keyframes background {
+  0% {
+   transform: scale(1);
+  }
+  50% {
+   transform: scale(1.07);
+  }
+    100% {
+     transform: scale(1);
+    }
 }
-
-@-webkit-keyframes bgrnd {
-	0%, 20%{
-		transform:linear-gradient;
-    	background-position: 20px 0;
-	}
+  @-webkit-keyframes background {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+    100% {
+     transform: scale(1);
+    }
 }
-
 
 .frame-anim {
 	max-width: 228px;
@@ -124,11 +128,10 @@ a {
 	top: 0;
 	left: 0;
 	overflow: hidden;
-	-webkit-animation: animImg 3s ease-out forwards;
-	animation: animImg 3s ease-out forwards;
+	-webkit-animation: animImg 3s ease-out;
+	animation: animImg 3s ease-out;
 	backface-visibility: hidden;
 }
-
 
 @keyframes animImg {
 	0%  {
@@ -149,12 +152,11 @@ a {
 }
 
 .text {
-	position: relative;
-	max-width: 144px;
-	max-height: 34px;
-	top: 189px;
-	left: 11px;
-	animation: animText;
+	width: 141px;
+    height: 30px;
+    position: absolute;
+    left: 10px;
+    top: 195px;
 }
 
 .btn {
@@ -163,16 +165,34 @@ a {
 	min-width: 114px;
 	max-height: 34px;
 	min-height: 34px;
-	display: block;
 	position: absolute;
-	top: 0;
-	left: 168px;
-	box-shadow: 10px 5px 0 3px #f5e4e4;
+	top: 190px;
+	left: 165px;
 }
-.btn:hover{
-	transform: translate(3px, 5px);
-	transition: 0.7s;
-	box-shadow: none;
+
+.btn:hover {
+	 position:absolute;
+	 top: 192px;
+	 left: 167px;
+}
+
+.btn::after {
+	content: '';
+	width: 114px;
+	height: 34px;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+	border: 3px solid #fff;	
+}
+
+.btn:hover:after {
+	top: 0;
+	left: 0; 
+}
+
+.btn, btn:hover, btn:after, btn:hover:after {
+	transition: all 0.3s ease;
 }
 
 .shop-now {

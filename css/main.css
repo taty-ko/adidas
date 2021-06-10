@@ -128,16 +128,21 @@ p {
 	top: 0;
 	left: 0;
 	overflow: hidden;
-	-webkit-animation: animImg 3s ease-out;
-	animation: animImg 3s ease-out;
-	backface-visibility: hidden;
+	animation-name: animImg;
+	animation-timing-function:ease-in-out;
+	animation-duration: 2s;
+	-webkit-animation-name: animImg;
+	-webkit-animation-timing-function:ease-in-out;
+	-webkit-animation-duration: 2s;
+	/*
+	backface-visibility: hidden; */
 }
 
 @keyframes animImg {
 	0%  {
 		width: 0;
 	}
-	40%, 100% {
+	100% {
 		width: 228px;
 	}
 }
@@ -146,7 +151,7 @@ p {
 	0%  {
 		width: 0;
 	}
-	40%, 100% {
+	100% {
 		width: 228px;
 	}
 }
@@ -218,138 +223,3 @@ p {
     left: 234px;
     top: 113px;
 }
-/* 
-.frame-1 .img-2 {
-    position: absolute;
-	top: 0px;
-	left: 0px;
-	min-width: 228px;
-	max-width: 228px;
-	-webkit-animation: scaleImg 5s ease forwards 3;
-	animation: scaleImg 5s ease forwards 3;
-	backface-visibility: hidden;
-}
-
-.frame-1 .logo {
-    position: absolute;
-    top: 111px;
-    left: 236px;
-    min-width: 41px;
-    max-width: 41px;
-}
-
-.frame-1 .text-1 {
-	position: absolute;
-	top: 189px;
-    left: 9px;
-    width: 144px;
-}
-
-.frame-1 .text-2 {
-	position: absolute;
-    top: 214px;
-    left: 9px;
-    width: 144px;
-}
-
-.frame-1 .wrap .btn {
-	position: absolute;
-    top: 188px;
-    left: 168px;
-    height: 34px;
-    width: 114px;
-	background: #ffffff;
-	transition: .5s ease;
-	-webkit-animation: cta 5s ease-out forwards 3;
-	animation: cta 5s ease-in-out forwards 3;
-}
-
-.frame-1 .wrap:hover .btn {
-	will-change: transform;
-	will-change: opacity;
-	will-change: top, left, bottom, right;
-    top: 190px;
-    left: 170px;
-}
-
-.frame-1 .wrap .btn .text-btn {
-	position: absolute;
-    top: 12px;
-    left: 15px;
-	height: 10px;
-    min-width: 56px;
-    max-width: 56px;
-}
-
-.frame-1 .wrap .btn .arrow {
-    position: absolute;
-	top: 12px;
-    left: 83px;
-    width: 17px;
-	transition: .5s ease;
-}
-
-.frame-1 .wrap:hover .btn .arrow {
-	left: 85px;
-}
-
-.frame-1 .wrap .box {
-	position: absolute;
-    top: 190px;
-    left: 170px;
-    height: 34px;
-    width: 114px;
-    border: 1px solid #ffffff;
-}
-
-.frame-1 .wrap .box-overflow-2 {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 228px;
-	height: 172px;
-	overflow: hidden;
-	will-change: width;
-	-webkit-animation: moveRight 5s ease-out forwards 3;
-	animation: moveRight 5s ease forwards 3;
-}
-
-@keyframes moveRight {
-	0%  {
-		width: 0;
-	}
-	40%, 100% {
-		width: 228px;
-	}
-}
-
-@-webkit-keyframes moveRight {
-	0%  {
-		width: 0;
-	}
-	40%, 100% {
-		width: 228px;
-	}
-}
-
-@keyframes scaleImg {
-	0% {
-		transform: scale(1.1);
-		-webkit-transform: scale(1.1);
-	}
-	40%, 100%{
-		transform: scale(1);
-		-webkit-transform: scale(1);
-	}
-}
-
-@-webkit-keyframes scaleImg {
-	0% {
-		transform: scale(1.1);
-		-webkit-transform: scale(1.1);
-	}
-	40%, 100% {
-		transform: scale(1);
-		-webkit-transform: scale(1);
-	}
-} */
